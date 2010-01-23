@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:ush="http://haiti.ushahidi.com/categories.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://haiti.ushahidi.com/categories.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment xml:lang="en">Ontology was created by compiling tag lists from http://haiti.ushahidi.com/reports/submit (Jan 22 2010) and http://sitroom.ushahididev.com/index.php/2010/01/15/update-on-haiti-categorization-1-urgen/</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Ontology>
+  <rdfs:Class rdf:ID="water_shortage">
+    <rdfs:label xml:lang="fr">3a. Penurie d'eau</rdfs:label>
+    <rdfs:label xml:lang="en">3a. Water shortage</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3a. Penurie d'eau | Water shortage</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="vital_lines"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="asking_to_forward_a_message">
+    <rdfs:label xml:lang="en">6c. Asking to forward a message</rdfs:label>
+    <rdfs:label xml:lang="fr">6c. Demandant de transmettre un message</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6c. Demandant de transmettre un message | Asking to forward a message</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="persons_news"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="food_distribution">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4d. Distribution d'aliments | Food distribution</rdfs:label>
+    <rdfs:label xml:lang="en">4d. Food distribution</rdfs:label>
+    <rdfs:label xml:lang="fr">4d. Distribution d'aliments</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="response"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="deaths">
+    <rdfs:label xml:lang="fr">6a. Deces</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6a. Deces | Deaths</rdfs:label>
+    <rdfs:label xml:lang="en">6a. Deaths</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#persons_news"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="usar_search_and_rescue">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4b. Recherche et sauvetage | USAR Search and Rescue</rdfs:label>
+    <rdfs:label xml:lang="fr">4b. Recherche et sauvetage</rdfs:label>
+    <rdfs:label xml:lang="en">4b. USAR Search and rescue</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="fire">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="emergency"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1b. Incendie | Fire</rdfs:label>
+    <rdfs:label xml:lang="fr">1b. Incendie</rdfs:label>
+    <rdfs:label xml:lang="en">1b. Fire</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="medical_emergency">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1f. Urgence medicale | Medical Emergency</rdfs:label>
+    <rdfs:label xml:lang="fr">1f. Urgence medicale</rdfs:label>
+    <rdfs:label xml:lang="en">1f. Medical emergency</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#emergency"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="threats">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2. Menaces | Threats</rdfs:label>
+    <rdfs:label xml:lang="en">2. Threats</rdfs:label>
+    <rdfs:label xml:lang="fr">2. Menaces</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="earthquake_and_aftershock">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1e. Seisme et repliques |  Earthquake and aftershock</rdfs:label>
+    <rdfs:label xml:lang="fr">1e. Seisme et repliques</rdfs:label>
+    <rdfs:label xml:lang="en">1e. Earthquake and aftershock</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#emergency"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="medical_equipment_and_supplies_needed">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#vital_lines"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">3e. Medical equipment and supplies needed</rdfs:label>
+    <rdfs:label xml:lang="fr">3e. Besoins en materiels et medicaments</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3e. Besoins en materiels et medicaments | Medical equipment and supplies needed</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#vital_lines">
+    <rdfs:label xml:lang="fr">3. Urgences logistiques</rdfs:label>
+    <rdfs:label xml:lang="en">3. Vital lines</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3. Urgences logistiques | Vital Lines</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="shelter">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4c. Refuge | Shelter</rdfs:label>
+    <rdfs:label xml:lang="fr">4c. Refuge</rdfs:label>
+    <rdfs:label xml:lang="en">4c. Shelter</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="power_outage">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3c. Sans courant | Power outage</rdfs:label>
+    <rdfs:label xml:lang="fr">3c. Sans courant</rdfs:label>
+    <rdfs:label xml:lang="en">3c. Power outage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#vital_lines"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="dead_bodies_management">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="fr">4h. Morgue</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4h. Morgue | Dead bodies management</rdfs:label>
+    <rdfs:label xml:lang="en">4h. Dead bodies management</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="people_trapped">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1c. Personnes prises au piege | People trapped</rdfs:label>
+    <rdfs:label xml:lang="fr">1c. Personnes prises au piege</rdfs:label>
+    <rdfs:label xml:lang="en">1c. People trapped</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#emergency"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="other">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5. Autre | Other</rdfs:label>
+    <rdfs:label xml:lang="fr">5. Autre</rdfs:label>
+    <rdfs:label xml:lang="en">5. Other</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#persons_news">
+    <rdfs:label xml:lang="fr">6. Nouvelles de Personnes</rdfs:label>
+    <rdfs:label xml:lang="en">6. Persons news</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6. Nouvelles de Personnes | Persons News</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="non_food_items">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4f. Denrees non alimentaires | Non food items</rdfs:label>
+    <rdfs:label xml:lang="fr">4f. Denrees non alimentaires</rdfs:label>
+    <rdfs:label xml:lang="en">4f. Non food items</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="water_sanitation_and_hygiene_promotion">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4e. Assainissement eau et hygiene | Water sanitation and hygiene promotion</rdfs:label>
+    <rdfs:label xml:lang="fr">4e. Assainissement eau et hygiene</rdfs:label>
+    <rdfs:label xml:lang="en">4e. Water sanitation and hygiene promotion</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="collapsed_structure">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1a. Structure effondres | Collapsed structure</rdfs:label>
+    <rdfs:label xml:lang="fr">1a. Structure effondres</rdfs:label>
+    <rdfs:label xml:lang="en">1a. Collapsed structure</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#emergency"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="road_blocked">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3b. Route barree | Road blocked</rdfs:label>
+    <rdfs:label xml:lang="fr">3b. Route baree</rdfs:label>
+    <rdfs:label xml:lang="en">3b. Road blocked</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#vital_lines"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="health_services">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4a. Services de sante | Health services</rdfs:label>
+    <rdfs:label xml:lang="fr">4a. Services de sante</rdfs:label>
+    <rdfs:label xml:lang="en">4a. Health services</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="contaminated_water_supply">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#emergency"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1d. Eau contaminee | Contaminated water supply</rdfs:label>
+    <rdfs:label xml:lang="fr">1d. Eau contaminee</rdfs:label>
+    <rdfs:label xml:lang="en">1d. Contaminated water supply</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="looting">
+    <rdfs:subClassOf rdf:resource="#threats"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2b. Pillage | Looting</rdfs:label>
+    <rdfs:label xml:lang="fr">2b. Pillage</rdfs:label>
+    <rdfs:label xml:lang="en">2b. Looting</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="food_shortage">
+    <rdfs:label xml:lang="en">3d. Food Shortage</rdfs:label>
+    <rdfs:label xml:lang="fr">3d. Penurie d'aliments</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3d. Penurie d'aliments | Food Shortage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#vital_lines"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="rubble_removal">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#response"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4g. Deblayage de gravats | Rubble removal</rdfs:label>
+    <rdfs:label xml:lang="fr">4g. Deblayage de gravats</rdfs:label>
+    <rdfs:label xml:lang="en">4g. Rubble removal</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="fuel_shortage">
+    <rdfs:subClassOf rdf:resource="#vital_lines"/>
+    <rdfs:label xml:lang="en">3f. Fuel shortage</rdfs:label>
+    <rdfs:label xml:lang="fr">3f. Penurie de carburant</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3f. Penurie de carburant | Fuel shortage</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#response">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4. Secours | Response</rdfs:label>
+    <rdfs:label xml:lang="fr">4. Secours</rdfs:label>
+    <rdfs:label xml:lang="en">4. Response</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="water_distribution">
+    <rdfs:label xml:lang="en">4i. Water distribution</rdfs:label>
+    <rdfs:label xml:lang="fr">4i. Distribution d'eau</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4i. Distribution d'eau | Water distribution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#response"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="structures_at_risk">
+    <rdfs:subClassOf rdf:resource="#threats"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2a. Structures a risque | Structures at risk</rdfs:label>
+    <rdfs:label xml:lang="fr">2a. Structures a risque</rdfs:label>
+    <rdfs:label xml:lang="en">2a. Structures at risk</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#emergency">
+    <rdfs:label xml:lang="fr">1. Urgences</rdfs:label>
+    <rdfs:label xml:lang="en">1. Emergency</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1. Urgences | Emergency</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="missing_persons">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >6b. Personnes Disparues | Missing Persons</rdfs:label>
+    <rdfs:label xml:lang="fr">6b. Personnes Disparues</rdfs:label>
+    <rdfs:label xml:lang="en">6b. Missing persons</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#persons_news"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="security_concern">
+    <rdfs:label xml:lang="fr">2c. Probleme de securite</rdfs:label>
+    <rdfs:label xml:lang="en">2c. Security Concern</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2c. Probleme de securite | Security Concern</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#threats"/>
+  </rdfs:Class>
+  <rdf:Description rdf:ID="menace">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2. Threats</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:ID="water_sanitation_and_hygiene">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4e. Assainissement eau et hygiene</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.1, Build 536)  http://protege.stanford.edu -->
